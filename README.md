@@ -45,13 +45,12 @@ For instance, the following example collects `light level` data for 10 seconds (
 
 ```blocks
 let data: number[] = []
-let x = 0
 for (let index = 0; index < 10; index++) {
-    x = input.lightLevel()
-    data.push(x)
+    data.push(input.lightLevel())
     basic.pause(1000)
 }
-sonification.playArray(sonification.mapArray(data, 262, sonification.chooseScale(sonification.Scale.Major)), 1000)
+let data2tones = sonification.mapArray(data, 294, sonification.chooseScale(sonification.Scale.Minor), 2)
+sonification.playArray(data2tones, 1000)
 ```
 
 Any array of numbers can be used as input. This is useful for *a posteriori* sonification when you want to sonify the data after collecting it.
