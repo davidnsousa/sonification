@@ -44,14 +44,14 @@ The `map` function  for arrays returns an array of integer numbers from mapping 
 For instance, the following example collects `light level` data for 10 seconds (one value per second) while mapping it to the `Middle D` `Minor` scale on `2` octaves, and plays the data after collection, each tone sequentially for `1000` ms:
 
 ```blocks
-let x = 0
 let data: number[] = []
+let x = 0
 for (let index = 0; index < 10; index++) {
-    x = sonification.map(input.lightLevel(), 0, 255, 294, sonification.chooseScale(sonification.Scale.Minor), 2)
+    x = input.lightLevel()
     data.push(x)
     basic.pause(1000)
 }
-sonification.playArray(data, 1000)
+sonification.playArray(sonification.mapArray(data, 262, sonification.chooseScale(sonification.Scale.Major)), 1000)
 ```
 
 Any array of numbers can be used as input. This is useful for *a posteriori* sonification when you want to sonify the data after collecting it.
