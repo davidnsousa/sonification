@@ -185,10 +185,12 @@ namespace sonification {
     //% help=github:sonification/docs/mapArray
     export function mapArray(list: number[], key: number, rule: number[], octaves?: number): number[] {
         let notes: any[] = [key];
+        let f = 1;
         for (let o = 1; o <= octaves; o++) {
             for (let r = 0; r < rule.length; r++) {
-                notes.push(Math.round(o * key * rule[r]));
+                notes.push(Math.round(f * key * rule[r]));
             }
+            f = f * 2;
         }
         let mappednotes: any[] = [];
         let low = findMin(list);
@@ -222,10 +224,12 @@ namespace sonification {
     //% help=github:sonification/docs/map
     export function map(value: number, low: number, high: number, key: number, rule: number[], octaves?: number): number {
         let notes2: any[] = [key];
+        let f = 1;
         for (let p = 1; p <= octaves; p++) {
             for (let s = 0; s < rule.length; s++) {
-                notes2.push(Math.round(p * key * rule[s]));
+                notes2.push(Math.round(f * key * rule[s]));
             }
+            f = f * 2;
         }
         let mappedindex2 = Math.round(((value - low) / (high - low)) * (notes2.length - 1))
         return notes2[mappedindex2];
