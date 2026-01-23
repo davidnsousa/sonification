@@ -1,0 +1,14 @@
+{
+  "sonification.Scale.Major|block": "major scale",
+  "sonification.Scale.Minor|block": "minor scale",
+  "sonification.InputSensor.Light|block": "light sensor",
+  "sonification.InputSensor.Sound|block": "sound sensor",
+  "sonification.InputSensor.Temperature|block": "temperature sensor",
+  "sonification.InputSensor.Acceleration|block": "acceleration",
+  "sonification.mapToFrequency|block": "map value to frequency (%array)",
+  "sonification.playFrequency|block": "play frequency %frequency Hz for %duration ms",
+  "sonification.stop|block": "stop sound",
+  "sonification.setTempo|block": "set tempo to %tempo BPM",
+  "sonification.sonify|block": "sonify data using %sensor with %scale scale",
+  "sonification.playArray|block": "play array %array with %duration ms per note"
+}
