@@ -1,0 +1,14 @@
+{
+  "sonification.Scale.Major|block": "dúr hangsor",
+  "sonification.Scale.Minor|block": "mol hangsor",
+  "sonification.InputSensor.Light|block": "fényérzékelő",
+  "sonification.InputSensor.Sound|block": "hangérzékelő",
+  "sonification.InputSensor.Temperature|block": "hőmérséklet-érzékelő",
+  "sonification.InputSensor.Acceleration|block": "gyorsulás",
+  "sonification.mapToFrequency|block": "érték leképezése frekvenciára (%array)",
+  "sonification.playFrequency|block": "%frequency Hz frekvencia lejátszása %duration ms-ig",
+  "sonification.stop|block": "hang leállítása",
+  "sonification.setTempo|block": "tempó legyen %tempo BPM",
+  "sonification.sonify|block": "adatok hanggá alakítása %sensor érzékelőről %scale hangsorral",
+  "sonification.playArray|block": "tömb lejátszása %array %duration ms hangonként"
+}
